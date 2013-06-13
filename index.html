@@ -172,8 +172,9 @@
           var reader = new FileReader();
           reader.onload = (function(file){
             return function(e){
-              
+              alert(img.src);
               img.src = e.target.result;
+              alert(img.src);
             };
           })(file);
           reader.readAsDataURL(file);
